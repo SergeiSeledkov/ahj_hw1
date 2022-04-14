@@ -12,8 +12,8 @@ build_script:
 test_script:
 - npm run lint && npm test # скрипт тестирования
 deploy_script: # скрипт развёртывания
-- git config --global credential.helper store
-- git config --global user.name AppVeyor
-- git config --global user.email ci@appveyor.com
-- echo "https://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:x-oauth-basic@github.com" > "$HOME/.git-credentials"
-- npx push-dir --dir=dist --branch=gh-pages --force --verbose
+  - git config --global credential.helper store
+  - git config --global user.name AppVeyor
+  - git config --global user.email ci@appveyor.com
+  - echo "https://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:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  - npx push-dir --dir=dist --branch=gh-pages --force --verbose
